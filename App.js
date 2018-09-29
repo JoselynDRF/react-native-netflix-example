@@ -1,11 +1,24 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import {
+  View,
+  StyleSheet,
+} from 'react-native';
 
-export default class App extends React.Component {
+import SideMenu from 'react-native-side-menu';
+
+import List from './src/components/List';
+import Slider from './src/components/Slider';
+import Header from './src/components/Header';
+
+class App extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text> Hello World </Text>
+      <View style={[{ flex: 1 }, styles.container]}>
+        <SideMenu>
+          <Header />
+          <Slider />
+          <List />
+        </SideMenu>
       </View>
     );
   }
@@ -13,9 +26,8 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'black',
   },
 });
+
+export default App;
