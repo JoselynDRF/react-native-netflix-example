@@ -8,23 +8,25 @@ import {
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Header = props => (
-  <View style={styles.container}>
-    <TouchableWithoutFeedback>
+const Header = props => {
+  return (
+    <View style={styles.container}>
+      <TouchableWithoutFeedback onPress={() => props.toogle()}>
+        <Icon
+          name="bars"
+          color="white"
+          size={25}
+        />
+      </TouchableWithoutFeedback>
+      <Image style={styles.logo} source={require('../images/Netflix-logo.png')} />
       <Icon
-        name="bars"
+        name="search"
         color="white"
         size={25}
       />
-    </TouchableWithoutFeedback>
-    <Image style={styles.logo} source={require('../images/Netflix-logo.png')} />
-    <Icon
-      name="search"
-      color="white"
-      size={25}
-    />
-  </View>
-);
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: 'black',
-    marginHorizontal: 15,
+    paddingHorizontal: 15,
   },
   logo: {
     width: 120,
