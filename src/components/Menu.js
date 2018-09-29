@@ -66,6 +66,39 @@ class Menu extends Component {
               size={25}
             />
           </View>
+          <View style={[styles.items, styles.itemSelected]}>
+            <Text style={styles.text}> Home </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Available for Download </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Netflix Originals </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> TV Shows </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Actions & Adventure </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Children & Family Movies </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Comedies  </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Documentaries  </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Dramas  </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Independent Movies  </Text>
+          </View>
+          <View style={styles.noSelectedItems}>
+            <Text style={styles.text}> Indian Movies  </Text>
+          </View>
         </ScrollView>
       </View>
     )
@@ -123,6 +156,20 @@ const styles = StyleSheet.create({
   iconWithText: {
     marginRight: 10,
     paddingLeft: 20
+  },
+  items: {
+    paddingVertical: 15,
+    paddingLeft: 20,
+    marginTop: 5
+  },
+  itemSelected: {
+    borderLeftWidth: 5,
+    borderColor: 'red'
+  },
+  noSelectedItems: {
+    paddingVertical: 15,
+    paddingLeft: 25,
+    marginTop: 5
   }
 })
 
